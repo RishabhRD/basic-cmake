@@ -10,6 +10,7 @@ using json = nlohmann::json;
 TEST_CASE("Can serialize conversation") {
   rd::schema_t schema;
   schema.metadata = {
+      .id = "playstore_enterpret.txt",
       .source = "File",
       .country = "India",
       .app_version = "4.1.2",
@@ -23,6 +24,7 @@ TEST_CASE("Can serialize conversation") {
   json expected = {
       {"metadata",
        json{
+           {"id", "playstore_enterpret.txt"},
            {"source", "File"},
            {"country", "India"},
            {"app_version", "4.1.2"},
@@ -43,6 +45,7 @@ TEST_CASE("Can serialize conversation") {
 TEST_CASE("Can serialize review") {
   rd::schema_t schema;
   schema.metadata = {
+      .id = "playstore_enterpret.txt",
       .source = "File",
       .country = "India",
       .app_version = "4.1.2",
@@ -52,6 +55,7 @@ TEST_CASE("Can serialize review") {
   json expected = {
       {"metadata",
        json{
+           {"id", "playstore_enterpret.txt"},
            {"source", "File"},
            {"country", "India"},
            {"app_version", "4.1.2"},
@@ -66,6 +70,7 @@ TEST_CASE("Can serialize review") {
 TEST_CASE("Is skipping null field") {
   rd::schema_t schema;
   schema.metadata = {
+      .id = "playstore_enterpret.txt",
       .source = "File",
       .country = "India",
       .app_version = tl::nullopt,
@@ -75,6 +80,7 @@ TEST_CASE("Is skipping null field") {
   json expected = {
       {"metadata",
        json{
+           {"id", "playstore_enterpret.txt"},
            {"source", "File"},
            {"country", "India"},
        }},

@@ -23,6 +23,7 @@ using review = std::string;
 using feedback_t = std::variant<conversation, review>;
 
 struct metadata_t {
+  std::string id;
   std::string source;
   tl::optional<std::string> country;
   tl::optional<std::string> app_version;

@@ -11,6 +11,7 @@ namespace __detail {
 using json = nlohmann::json;
 inline auto serialize_metadata(rd::metadata_t metadata) {
   json j;
+  j["id"] = metadata.id;
   j["source"] = metadata.source;
   if (metadata.country)
     j["country"] = metadata.country.value();
