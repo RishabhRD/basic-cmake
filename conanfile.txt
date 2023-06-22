@@ -1,5 +1,7 @@
 [requires]
 doctest/2.4.11
+nlohmann_json/3.11.2
+boost/1.82.0 #ignore
 
 [generators]
 CMakeDeps

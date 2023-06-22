@@ -1,1 +1,2 @@
 find_package(DOCTEST REQUIRED)
+find_package(NLOHMANN_JSON REQUIRED)

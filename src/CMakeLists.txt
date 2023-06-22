@@ -1,4 +1,9 @@
 file(GLOB_RECURSE src_list "**.cpp")
-add_executable(monkeyshell ${src_list})
-target_include_directories(monkeyshell PRIVATE ../include)
-target_link_libraries(monkeyshell PRIVATE project_options project_warnings)
+add_executable(feedback_ingest ${src_list})
+target_include_directories(feedback_ingest PRIVATE ../include)
+target_link_libraries(feedback_ingest PRIVATE
+  project_options
+  project_warnings
+  nlohmann_json::nlohmann_json
+  boost::boost
+)

@@ -4,6 +4,8 @@ include(cmake/StandardProjectSettings.cmake)
 include(cmake/StaticAnalyzers.cmake)
 include(cmake/CompilerWarnings.cmake)
 include(package.cmake)
+find_package(Boost REQUIRED)
+
 
 add_library(project_options INTERFACE)
 target_compile_features(project_options INTERFACE cxx_std_20)
